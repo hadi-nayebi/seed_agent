@@ -1,0 +1,17 @@
+# Standard ignore
+node_modules/
+.DS_Store
+.env
+*.log
+
+# Seed Agent State (CRITICAL: Do not leak state to public repos)
+**/data.json
+**/.archive/
+**/*.tmp
+**/job.json
+
+# Local config
+settings.local.json
+
+# Test artifacts
+tests/sandbox/

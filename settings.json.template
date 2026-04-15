@@ -1,0 +1,62 @@
+{
+  "permissions": {
+    "allow": []
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/plugins/seed_agent/job_core/hooks/prompt-handler.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|Read|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/plugins/seed_agent/plugin_integrity/hooks/plugin-guard.sh",
+            "timeout": 120
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/plugins/seed_agent/job_core/hooks/job-guard.sh",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit|Read|Glob|Grep|Bash|WebSearch|WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/plugins/seed_agent/phasic_system/hooks/phase-gate.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/plugins/seed_agent/phasic_system/hooks/phase-init.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
