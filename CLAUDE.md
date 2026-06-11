@@ -31,6 +31,12 @@ your_project/                  # Root — agent workspace
 
 ## The Markov Brain (OPEVC)
 
+**Acronym definitions:**
+- **OPEVC** — Observe, Plan, Execute, Verify, Condense (the five-phase cognitive cycle)
+- **CLAUDE.md** — Working memory file; each directory where the agent works should have one
+- **LLM** — Large Language Model (the AI agent that OPEVC compartments to prevent cognitive collapse)
+- **CLI** — Command Line Interface (text-based interface for running commands and scripts)
+
 The brain cycles through 5 core phases. Each phase has a distinct purpose, produces distinct artifacts, and enforces distinct constraints on what the agent may do. Mixing phases leads to sloppy work and knowledge loss.
 
 **OBSERVE** — Bring useful info into `CLAUDE.md` files (populate working memory).
@@ -98,3 +104,11 @@ The brain must remain lean and compressed to preserve context space.
 | Subdir CLAUDE.md | 800 |
 | Plans | 2,000 |
 | Memory/Knowledge | 500 per file |
+
+---Ob---
+
+---Pl---
+
+---Ex---
+
+---Ve---
