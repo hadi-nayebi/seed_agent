@@ -173,7 +173,7 @@ You do not need to run manual bash commands to use the Seed Agent. Simply give i
 
 > *"I want to start a new project to build a landing page for my bakery."*
 
-The `job_core` prompt-handler will automatically intercept your request, create a new job, and the `phasic_system` will drop the agent into the **Observe** phase to begin investigating.
+The `job_core` prompt-handler will automatically intercept your request, create a new job, and the `phasic_system` will lock it into the **IDLE** phase — from which you run `phase.sh advance` to begin your first **Observe** cycle.
 
 ---
 
