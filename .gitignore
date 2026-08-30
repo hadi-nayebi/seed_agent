@@ -1,22 +1,26 @@
-# Standard ignore
-node_modules/
+# Platform / editor
 .DS_Store
 .env
+.env.*
+!.env.example
 *.log
 
-# Seed Agent State (CRITICAL: Do not leak state to public repos)
-**/data.json
-**/.archive/
-**/*.tmp
-**/job.json
+# JavaScript / TypeScript
+node_modules/
+dist/
+coverage/
 
-# Local config
-settings.local.json
-
-# Test artifacts
-tests/sandbox/
-
-# Python bytecode
+# Python
 __pycache__/
 *.pyc
 *.pyo
+
+# Local / transient harness state
+**/data.json
+**/*.tmp
+**/*.lock
+**/.archive/
+settings.local.json
+
+# User job state may become more specific once the job contract is defined.
+# Do not add broad rules that would hide future source or architecture by accident.
