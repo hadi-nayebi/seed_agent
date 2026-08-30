@@ -2,77 +2,58 @@
 
 Seed Agent is an open-source, user-owned agent harness being reimplemented for **OpenAI Codex CLI**.
 
-> **Status:** foundation reset. This repository is not ready for installation or general use yet.
+> **Status:** foundation only. Not ready for installation or general use.
 
 ## What this repository is
 
-This repository is the public development home for the Codex version of Seed Agent. It starts from the behavioral lessons and architectural patterns of an earlier private Seed implementation, but it is **not a source-code port** of that system.
+This is the public development home for the Codex version of Seed Agent.
 
-The earlier implementation was built around Claude Code and accumulated a large experimental harness: persistent jobs, cognitive phases, behavioral plugins, local memory, deterministic guards, verification, condensation, questioning discipline, and governed self-modification. That implementation is now frozen and remains private. It is reference evidence for understanding what a capability was trying to accomplish, where it failed, and which abstractions survived use.
+An earlier private Seed was built around Claude Code and is now frozen. It remains reference evidence for understanding behavioral objectives, failures, and architectural patterns, but this repository does not port its Bash code, `.claude/` layout, `CLAUDE.md` conventions, thresholds, or Claude-specific workarounds.
 
-The Codex version will be implemented anew against Codex's actual primitives and constraints. Claude-specific files, Bash mechanisms, hook workarounds, thresholds, and directory conventions are not requirements here unless a new Codex design independently justifies them.
+The Codex implementation will be designed against Codex's own primitives and constraints.
 
-## Architectural direction
+## Architecture
 
-Seed separates three kinds of change:
+Seed separates three layers:
 
-1. **Runtime/framework primitives** — capabilities supplied by Codex or by small general mechanisms that must sit close to the runtime.
-2. **Harness cognition** — reusable, inspectable behavior under `.codex/`: plugins, job semantics, phase cognition, memory behavior, guards, authority boundaries, verification, and other user-owned mechanisms.
-3. **Job experience** — the user's concrete objectives, rulings, plans, artifacts, outcomes, and accumulated experience. The public distribution does not ship one person's private job history as canonical behavior.
+1. **Codex runtime/framework** — general execution primitives.
+2. **Harness cognition** — reusable, inspectable Seed behavior under `.codex/` or another explicitly justified harness compartment.
+3. **Job experience** — a user's concrete objectives, rulings, plans, artifacts, outcomes, and accumulated experience.
 
 The preferred placement is the most flexible layer that can honestly provide the required guarantee.
 
 ## Instructions are not working memory
 
-The first private Seed mixed stable directory instructions and dynamic working memory inside `CLAUDE.md` files. This implementation starts with a cleaner separation:
+The Claude reference combined stable directory instructions and dynamic working memory in `CLAUDE.md` files. Codex Seed starts with those roles separated:
 
-- `AGENTS.md` is the Codex-native **stable/scoped instruction layer**.
-- Dynamic local working memory is a **separate organ**. `WM.md` is the current candidate name, but its discovery rules, grammar, phase surface, persistence, and authority have **not been frozen or implemented yet**.
-- Structured plugin/job state should live behind explicit owners and interfaces rather than being hidden inside instruction prose.
+- `AGENTS.md` — stable scoped instructions.
+- `WM.md` — current candidate for a future dynamic local working-memory organ; not yet specified or implemented.
 
-No `WM.md` files are created in this foundation reset because the contract should be designed before the format becomes accidental API.
-
-## Repository shape
+## Current repository shape
 
 ```text
 seed_agent/
-├── AGENTS.md                 builder/runtime orientation for Codex
+├── AGENTS.md
 ├── .codex/
-│   ├── AGENTS.md             harness boundary and compartment map
-│   ├── context/              shared architectural language
-│   ├── plugins/              reusable behavioral compartments
-│   ├── knowledge/            durable verified cognition
-│   └── jobs/                 deployment-specific job experience boundary
+│   ├── AGENTS.md
+│   └── context/
 ├── README.md
 └── LICENSE
 ```
 
-The empty-looking compartments are deliberate. They establish ownership boundaries, not finished implementation.
+New compartments are added only when a real capability needs them.
 
 ## Development method
 
-Each substantial capability should be built as a narrow, reviewable slice:
+For each substantial capability:
 
-1. Study the frozen reference implementation and relevant observed failures.
-2. State the behavioral objective in implementation-independent language.
-3. Inspect what Codex already provides natively.
-4. Decide whether the capability belongs in runtime machinery, harness cognition, job experience, or an explicit composition of them.
-5. Define state, interfaces, authority, failure behavior, and acceptance evidence.
-6. Write focused tests for the approved contract.
-7. Implement the smallest end-to-end behavior and learn from it before generalizing.
+1. Study the frozen reference behavior and failures.
+2. State the behavioral objective without historical implementation assumptions.
+3. Inspect Codex-native capabilities.
+4. Define ownership, state, interfaces, authority, failure/recovery, and acceptance evidence.
+5. Implement the smallest end-to-end slice and learn from it before generalizing.
 
-The goal is not to reproduce every historical mechanism. The goal is to discover and implement the stable abstractions of a user-owned digital cortex on Codex.
-
-## Current non-goals
-
-This reset intentionally does **not**:
-
-- migrate the private Claude implementation into this repository;
-- choose the complete plugin inventory;
-- freeze the `WM.md` working-memory format;
-- define every future PR or development milestone;
-- ship example user jobs as canonical cognition; or
-- provide an installer before there is a coherent implementation to install.
+The goal is not to reproduce every historical mechanism. The goal is to discover and implement stable abstractions of a user-owned digital cortex on Codex.
 
 ## License
 
