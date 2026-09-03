@@ -55,6 +55,13 @@ For each substantial capability:
 
 The goal is not to reproduce every historical mechanism. The goal is to discover and implement stable abstractions of a user-owned digital cortex on Codex.
 
+## Contributing
+
+Seed Agent is still a sparse foundation. Conceptual questions and generalized field reports can
+begin on the [project discussion](https://hadi-nayebi.github.io/projects/seed-agent.html);
+architecture studies, corrections, and approved candidate changes belong here. Read
+[CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
