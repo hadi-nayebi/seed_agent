@@ -1,6 +1,6 @@
-# Seed Agent — Codex foundation
+# Seed Agent — Codex patterns
 
-This repository is the public Codex-native reimplementation of Seed Agent.
+This repository accumulates Codex-specific architectural context and selectively reusable building blocks for Hadosh Academy. Each user and their agent derive their own harness; they may adapt components here or build from the Academy writings entirely from scratch. Do not impose a roadmap toward one standard installable harness or treat intentional sparseness as a defect.
 
 The private Hadosh Academy Claude Seed is frozen reference evidence. Study its behavioral objectives, failures, and patterns; do not mechanically port its Bash code, `.claude/` layout, `CLAUDE.md` conventions, thresholds, or Claude-specific workarounds.
 

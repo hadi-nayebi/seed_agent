@@ -1,10 +1,12 @@
 # Codex Seed architecture
 
-**Status:** foundation contract; implementation not started.
+**Current contents:** architecture contracts; reusable runtime behavior has not been implemented here.
 
 ## Identity
 
-Seed Agent is a public, user-owned cognitive harness for Codex CLI. The model animates the system; durable identity, memory, behavior, authority, and job experience remain inspectable outside the model.
+Seed Agent is a public accumulation point for Codex-specific harness patterns and selectively reusable components. The Academy writings supply the broader design principles. Users and their agents derive distinct harnesses, selecting and adapting components when useful or building from the writings alone.
+
+In each resulting harness, the model animates the system; durable identity, memory, behavior, authority, and job experience remain inspectable outside the model. This repository does not define one standard organism for every user.
 
 ## Reference lineage
 
