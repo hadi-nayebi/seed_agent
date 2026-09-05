@@ -2,7 +2,7 @@
 
 Seed Agent is Hadosh Academy's public **OpenAI Codex CLI** pattern-accumulation repository for user-owned harnesses.
 
-It starts deliberately sparse: architectural context is present; reusable runtime behaviors are admitted only as evidence supports them.
+It starts deliberately sparse: architectural context is present; reusable runtime behavior enters only after community use and implementation evidence show that it is sufficiently foundational.
 
 ## What this repository is
 
