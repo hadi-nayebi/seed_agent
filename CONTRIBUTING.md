@@ -1,10 +1,10 @@
 # Contributing to Seed Agent
 
-Seed Agent is a public Codex-native foundation for discovering stable abstractions of a user-owned
-digital cortex.
+Seed Agent accumulates Codex-specific patterns and selectively reusable building blocks for
+distinct user-owned harnesses, informed by the Academy writings and community experience.
 
-> **Current boundary:** foundation only. The repository is not ready for installation or general
-> use, and a contribution must not imply otherwise.
+> **Current contents:** architectural context and contribution guidance. A contribution must
+> identify what is actually implemented and must not imply one standard harness for every user.
 
 Read [the Academy contribution guide](https://hadi-nayebi.github.io/CONTRIBUTING.md) for the shared
 community return model. This file defines the narrower Seed Agent engineering boundary.

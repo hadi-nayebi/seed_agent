@@ -1,6 +1,6 @@
 # Seed harness boundary
 
-`.codex/` is the public cognition layer for the Codex Seed Agent.
+`.codex/` owns the public Codex-specific context and any selectively admitted reusable cognition. It is a source of patterns for distinct user harnesses, not a compulsory shared brain.
 
 Only create a child compartment when a real capability needs a durable owner. Do not mirror the frozen Claude Seed directory tree or pre-create historical plugin names.
 

@@ -1,16 +1,18 @@
 # Seed Agent
 
-Seed Agent is an open-source, user-owned agent harness being reimplemented for **OpenAI Codex CLI**.
+Seed Agent is Hadosh Academy's public **OpenAI Codex CLI** pattern-accumulation repository for user-owned harnesses.
 
-> **Status:** foundation only. Not ready for installation or general use.
+It starts deliberately sparse: architectural context is present; reusable runtime behavior enters only after community use and implementation evidence show that it is sufficiently foundational.
 
 ## What this repository is
 
-This is the public development home for the Codex version of Seed Agent.
+The [Academy writings](https://hadi-nayebi.github.io/blog.html) provide task- and framework-agnostic design principles. This repository gives sufficiently foundational concepts and selected building blocks a Codex-specific home as community implementations produce useful evidence.
+
+Each user and their agent build a distinct harness. They may select and adapt a component here, or build entirely from the writings. The repository does not prescribe one standard harness to install unchanged.
 
 An earlier private Seed was built around Claude Code and is now frozen. It remains reference evidence for understanding behavioral objectives, failures, and architectural patterns, but this repository does not port its Bash code, `.claude/` layout, `CLAUDE.md` conventions, thresholds, or Claude-specific workarounds.
 
-The Codex implementation will be designed against Codex's own primitives and constraints.
+Any admitted implementation is designed against Codex's own primitives and constraints.
 
 ## Architecture
 
@@ -57,7 +59,7 @@ The goal is not to reproduce every historical mechanism. The goal is to discover
 
 ## Contributing
 
-Seed Agent is still a sparse foundation. Conceptual questions and generalized field reports can
+The sparse starting point leaves room for evidence-backed contributions. Conceptual questions and generalized field reports can
 begin on the [project discussion](https://hadi-nayebi.github.io/projects/seed-agent.html);
 architecture studies, corrections, and approved candidate changes belong here. Read
 [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
