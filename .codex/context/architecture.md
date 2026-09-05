@@ -6,7 +6,7 @@
 
 Seed Agent is a public accumulation point for Codex-specific harness patterns and selectively reusable components. The Academy writings supply the broader design principles. Users and their agents derive distinct harnesses, selecting and adapting components when useful or building from the writings alone.
 
-In each resulting harness, the model animates the system; durable identity, memory, behavior, authority, and job experience remain inspectable outside the model. This repository does not define one standard organism for every user.
+In each resulting harness, the model animates the system; durable identity, memory, behavior, authority, and job experience remain inspectable outside the model. Because its context, selected components, and accumulated experience are user-specific, each harness becomes a distinct software organism rather than one standard form defined by this repository.
 
 ## Reference lineage
 
