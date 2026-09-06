@@ -14,13 +14,3 @@ coverage/
 __pycache__/
 *.pyc
 *.pyo
-
-# Local / transient harness state
-**/data.json
-**/*.tmp
-**/*.lock
-**/.archive/
-settings.local.json
-
-# User job state may become more specific once the job contract is defined.
-# Do not add broad rules that would hide future source or architecture by accident.
