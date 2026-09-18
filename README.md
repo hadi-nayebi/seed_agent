@@ -35,12 +35,16 @@ The Claude reference combined stable directory instructions and dynamic working 
 
 ```text
 seed_agent/
-├── AGENTS.md
 ├── .codex/
 │   ├── AGENTS.md
 │   └── context/
-├── README.md
-└── LICENSE
+│       ├── INDEX.md
+│       └── architecture.md
+├── .gitignore
+├── AGENTS.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
 ```
 
 New compartments are added only when a real capability needs them.
